@@ -4,10 +4,11 @@
 #
 Name     : mvn-generex
 Version  : 1.0.0
-Release  : 1
+Release  : 2
 URL      : https://github.com/mifmif/Generex/archive/1.0.0.tar.gz
 Source0  : https://github.com/mifmif/Generex/archive/1.0.0.tar.gz
-Source1  : https://repo1.maven.org/maven2/com/github/mifmif/generex/1.0.1/generex-1.0.1.pom
+Source1  : https://repo1.maven.org/maven2/com/github/mifmif/generex/1.0.1/generex-1.0.1.jar
+Source2  : https://repo1.maven.org/maven2/com/github/mifmif/generex/1.0.1/generex-1.0.1.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -33,7 +34,10 @@ data components for the mvn-generex package.
 
 %install
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/github/mifmif/generex/1.0.1
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/github/mifmif/generex/1.0.1/generex-1.0.1.pom
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/github/mifmif/generex/1.0.1/generex-1.0.1.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/github/mifmif/generex/1.0.1
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/github/mifmif/generex/1.0.1/generex-1.0.1.pom
 
 
 %files
@@ -41,4 +45,5 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/github/mifmif/gener
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/com/github/mifmif/generex/1.0.1/generex-1.0.1.jar
 /usr/share/java/.m2/repository/com/github/mifmif/generex/1.0.1/generex-1.0.1.pom
