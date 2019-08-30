@@ -4,7 +4,7 @@
 #
 Name     : mvn-generex
 Version  : 1.0.0
-Release  : 2
+Release  : 3
 URL      : https://github.com/mifmif/Generex/archive/1.0.0.tar.gz
 Source0  : https://github.com/mifmif/Generex/archive/1.0.0.tar.gz
 Source1  : https://repo1.maven.org/maven2/com/github/mifmif/generex/1.0.1/generex-1.0.1.jar
